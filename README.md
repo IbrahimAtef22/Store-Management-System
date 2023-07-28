@@ -1,5 +1,7 @@
 # Store-Management-System
-This is a desktop application built using Java Swing and Hibernate, which allows you to manage categories, brands, products, and branches in a store. The application uses JDBC to communicate with a MySQL database and follows an Object-Oriented Programming (OOP) paradigm. Maven is used as the build and dependency management tool.
+This is a desktop application built using Java Swing and Hibernate, which allows you to manage categories,
+brands, products, and branches in a store. The application uses JDBC to communicate with a MySQL database and
+follows an Object-Oriented Programming (OOP) paradigm. Maven is used as the build and dependency management tool.
 
 # Usage
 Once the application is built and running, you can perform the following CRUD operations:
