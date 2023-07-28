@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/store_java</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">password</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+        
+        
+             <property name="hibernate.current_session_context_class">thread</property>
+<!--        2. update – Update the existing table, if the table is not there create a new one.
+               3. create – first it will drop the existing table then it will create a new one.-->
+        <property name="hbm2ddl.auto">update</property>
+        
+        <!--        If we define property name show_sql is true then hibernate generated query will come on the consol during program execution-->
+<!--        <property name="hibernate.show_sql">false</property>-->
+        <!-- mapping  all classes   -->
+        <mapping class="storejava.dal.hibernate.entity.Branches"/>
+        <mapping class="storejava.dal.hibernate.entity.Brands"/>
+        <mapping class="storejava.dal.hibernate.entity.Categories"/>
+        <mapping class="storejava.dal.hibernate.entity.Cities"/>
+        <mapping class="storejava.dal.hibernate.entity.Products"/>
+        <mapping class="storejava.dal.hibernate.entity.ProductsSizes"/>
+        <mapping class="storejava.dal.hibernate.entity.Sizes"/>
+        <mapping class="storejava.dal.hibernate.entity.Zones"/>
+        
+   
+    </session-factory>
+</hibernate-configuration>
